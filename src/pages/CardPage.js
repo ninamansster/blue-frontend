@@ -25,7 +25,7 @@ export const CardPage = () => {
           <Link key={card.cardID} to={`/carddetails/${card.cardID}`}>
             <article>
               <section className="frontInfo">
-                <img src="./assets/matthew-mcbrayer-s.jpg" alt="cardfront" aria-label="card-display" />
+                <img src="./assets/matthew.jpg" alt="cardfront" aria-label="card-display" />
 
                 <h1>{card.title}</h1>
               </section>
