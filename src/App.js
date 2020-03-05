@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { CardPage } from './pages/CardPage'
 import { FlippingCardPage } from './pages/FlippingCardPage'
 
-
 export const App = () => {
   return (
     <Router>

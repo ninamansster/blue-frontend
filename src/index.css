@@ -9,8 +9,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000;
+  background: #67b3f3;
   color: #fff;
+  
+
 }
 
 code {
@@ -63,22 +65,11 @@ code {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
-  
 }
 
 article {
   width:200px;
   height: 300px;
-  border: solid 0.5px pink;
-  /* background-color: blue; */
-  background-image: url(./assets/matthew.jpg);
-  /* -webkit-box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.9);
-  -moz-box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.9);
-  box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.9); */
-  word-break: break-word; 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  margin: 20px;
   box-sizing: border-box;
-}
+} 

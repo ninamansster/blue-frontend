@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './flipp.css'
 
 // const URL = 'http://localhost:8080/cards'
@@ -11,26 +11,40 @@ export const FlippingCardPage = () => {
     fetch(
       'http://localhost:8080/cards'
     )
-      .then(res => res.json())
-      .then(json => {
+      .then((res) => res.json())
+      .then((json) => {
         setCards(json)
       })
   }, [])
 
   return (
+
     <section>
       <h1>Pick a card</h1>
-      <article className="flipCard">
-        <div className="flipCardInner">
-          <div className="flipCardFront">
-            <h1>Front</h1>
-          </div>
-          <div className="flipCardBack">
-            {/* <img src="https://images.unsplash.com/photo-1507561152-ed3719ac59f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"></img> */}
-            <h1>Back</h1>
-          </div>
-        </div>
-      </article>
+      <div className="fullPage">
+        {cards.map((card) => (
+          <article className="flipCard" key={card.cardID}>
+            <div className="flipCardInner" key={card.cardID}>
+              <div className="flipCardFront">
+                <div key={card.cardID}>
+                  <h1> Bring it on</h1>
+                </div>
+              </div>
+              <div className="flipCardBack">
+                <Link key={card.cardID} to={`/carddetails/${card.cardID}`}>
+                  <img
+                    key={card.cardID}
+                    src={card.image}
+                    alt="cardfront"
+                    aria-label="card-display"
+                    style={{ height: 300 }} />
+                  <h1>{card.title}</h1>
+                </Link>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   )
 }
