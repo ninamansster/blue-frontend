@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-// import { ReactComponent as Matthew } from './assets/matthew.jpg'
-
-// import './flipp.css'
 
 // const URL = 'http://localhost:8080/cards'
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { CardPage } from './pages/CardPage'
 import { FlippingCardPage } from './pages/FlippingCardPage'
+import { DetailsPage } from './pages/DetailsPage'
 
 export const App = () => {
   return (
@@ -26,7 +27,9 @@ export const App = () => {
           <p>Card section</p>
         </section>
       </Route>
-
+      <Route path="/cards/:cardID">
+        <DetailsPage />
+      </Route>
     </Router>
   )
 }

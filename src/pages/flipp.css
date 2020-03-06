@@ -44,7 +44,7 @@
 }
 
 /* Style the back side */
-.flipCardBack {
+.flipCardBack{
   /* background-color: dodgerblue; */
   color: white;
   transform: rotateY(180deg);
@@ -52,4 +52,17 @@
   background: linear-gradient(145deg, #5da1db, #6ec0ff);
   box-shadow:  31px 31px 62px #5898cf, 
              -31px -31px 62px #76ceff;
+}
+
+.flipCardBack img{
+  /* background-color: dodgerblue; */
+  color: white;
+  width: 200px;
+  height: 300px;
+  /* transform: rotateY(180deg); */
+  border-radius: 20px;
+  /* background: linear-gradient(145deg, #5da1db, #6ec0ff); */
+  box-shadow:  31px 31px 62px #5898cf, 
+             -31px -31px 62px #76ceff;
+
 }

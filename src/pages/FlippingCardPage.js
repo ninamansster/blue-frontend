@@ -27,17 +27,17 @@ export const FlippingCardPage = () => {
             <div className="flipCardInner" key={card.cardID}>
               <div className="flipCardFront">
                 <div key={card.cardID}>
-                  <h1> Bring it on</h1>
+                  <h1> BlueDoing</h1>
                 </div>
               </div>
               <div className="flipCardBack">
-                <Link key={card.cardID} to={`/carddetails/${card.cardID}`}>
-                  <img
-                    key={card.cardID}
-                    src={card.image}
-                    alt="cardfront"
-                    aria-label="card-display"
-                    style={{ height: 300 }} />
+                <Link key={card.cardID} to={`/cards/${card.cardID}`}>
+                  {card.image
+                    && <img
+                      key={card.cardID}
+                      src={card.image}
+                      alt="cardfront"
+                      aria-label="card-display" />}
                   <h1>{card.title}</h1>
                 </Link>
               </div>
