@@ -8,6 +8,11 @@ const Container = styled.div`
   background-color: white;
   margin-bottom: 20px;
 `
+const Header = styled.h1`
+  margin: 0px;
+  font-size: 30px;
+  color: grey;
+`
 const Title = styled.h1`
   margin: 0px;
   font-size: 24px;
@@ -23,19 +28,23 @@ const TitleBar = styled.div`
   align-items: center;
 `
 const CoverImage = styled.img`
-  width: 300px;
-  height: 500px;
+  width:300px;
+  height: 200px;
+  object-fit: cover; 
   border-radius: 6px 6px 0 0;
+
 `
 const Content = styled.div`
   padding: 20px;
 `
-export const Details = ({ title, secondaryText, coverImage, className }) => (
+
+export const Details = ({ header, title, secondaryText, coverImage, className }) => (
   <Container className={className}>
     {coverImage && <CoverImage src={coverImage} />}
     <Content>
       <TitleBar>
         <div>
+          {header && <Header>{header}</Header>}
           {title && <Title>{title}</Title>}
           {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
         </div>

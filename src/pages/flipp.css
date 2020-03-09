@@ -9,6 +9,7 @@
   background: linear-gradient(145deg, #5da1db, #6ec0ff);
   box-shadow:  31px 31px 62px #5898cf, 
              -31px -31px 62px #76ceff;
+
 }
 
 /* This container is needed to position the front and back side */
@@ -54,15 +55,26 @@
              -31px -31px 62px #76ceff;
 }
 
-.flipCardBack img{
-  /* background-color: dodgerblue; */
+.cardWrap {
+  position: relative;
+}
+.cardWrap a h1 {
+  position: absolute;
+  text-decoration: none;
+  text-decoration-line: none;
+  color: black;
+  background-color: thistle;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+}
+
+.cardWrap img{
   color: white;
   width: 200px;
   height: 300px;
-  /* transform: rotateY(180deg); */
+  object-fit: cover;
   border-radius: 20px;
-  /* background: linear-gradient(145deg, #5da1db, #6ec0ff); */
   box-shadow:  31px 31px 62px #5898cf, 
              -31px -31px 62px #76ceff;
-
 }

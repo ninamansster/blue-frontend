@@ -3,8 +3,14 @@ import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { Details } from './components/Details'
 
+const Detailsection = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 const ThinnerCard = styled(Details)`
   width: 300px;
+  margin-top: 20px;
 `
 export const DetailsPage = () => {
   const [card, setCard] = useState([])
@@ -30,12 +36,12 @@ export const DetailsPage = () => {
 
   return (
 
-    <section>
-      <h1>Detaljer, detaljer {card.title} </h1>
+    <Detailsection>
       <ThinnerCard
         coverImage={card.image}
+        header={card.header}
         title={card.title}
         secondaryText={card.fact} />
-    </section>
+    </Detailsection>
   )
 }

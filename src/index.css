@@ -21,27 +21,27 @@ code {
 }
 
 /* FLEX */
-.fullPage {
+/* .fullPage {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 /*FRONT*/
 
-.fullPage a {
+/* .fullPage a {
   position: relative;
   /* width:25%; */
-  z-index: 0;
+  /* z-index: 0;
   margin: 0;
   color: #fff
-}
+} */
 
-.fullPage a img {
+/* .fullPage a img {
   width:100%;
   
-}
+} */
 
-.fullPage .frontInfo {
+/* .fullPage .frontInfo {
   display: block;
   position: absolute;
   z-index: 1;
@@ -65,11 +65,21 @@ code {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-end;
-}
+}  */
 
 article {
   width:200px;
   height: 300px;
   margin: 20px;
   box-sizing: border-box;
-} 
+}
+
+.deck {
+  width:200px;
+  height: 300px;
+  margin: 50px 100px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #5da1db, #6ec0ff);
+  box-shadow:  31px 31px 62px #5898cf, 
+             -31px -31px 62px #76ceff;
+}
