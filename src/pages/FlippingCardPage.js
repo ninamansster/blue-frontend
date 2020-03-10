@@ -45,7 +45,7 @@ export const FlippingCardPage = () => {
                         alt="cardfront"
                         aria-label="card-display" />}
                     {card.title
-                      && <h1>{card.title}</h1>}
+                      && <h1 className="cardWrapLink">{card.title}</h1>}
                   </div>
                 </Link>
               </div>

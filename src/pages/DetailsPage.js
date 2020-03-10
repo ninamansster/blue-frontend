@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { Loading } from './components/Loading'
 import styled from 'styled-components'
 import { Details } from './components/Details'
 
@@ -10,6 +11,7 @@ const Detailsection = styled.section`
 `
 const ThinnerCard = styled(Details)`
   width: 300px;
+  min-height:500px;
   margin-top: 20px;
 `
 export const DetailsPage = () => {
@@ -31,7 +33,7 @@ export const DetailsPage = () => {
   }, [cardID])
 
   if (loading) {
-    return <h1> Loading page</h1>
+    return <Loading />
   }
 
   return (
