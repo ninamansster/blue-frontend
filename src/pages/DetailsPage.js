@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import styled from 'styled-components/macro'
 import { Loading } from './components/Loading'
-import styled from 'styled-components'
 import { Details } from './components/Details'
 
 const Detailsection = styled.section`

@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  border-radius: 6px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, white, white);
+  box-shadow:  31px 31px 62px #5898cf, 
+             -31px -31px 62px #76ceff;
   background-color: white;
   margin-bottom: 20px;
 `
@@ -31,7 +32,7 @@ const CoverImage = styled.img`
   width:300px;
   height: 200px;
   object-fit: cover; 
-  border-radius: 6px 6px 0 0;
+  border-radius: 20px 20px 0 0;
 
 `
 const Content = styled.div`

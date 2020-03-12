@@ -3,19 +3,20 @@ import { useDispatch } from 'react-redux'
 import { fetchCard } from 'reducers/userCard'
 import styled from 'styled-components/macro'
 
-//Button styling
+// Button styling
 
 const Button = styled.button`
-  width: 150px;
-  height: 30px;
-  background-color: darkblue;
-  text-align: center;
-  border-radius: 8px;
-  font-size: 14px;
+  width: 200px;
+  height: 300px;
+  /* background-color: darkblue;
+  text-align: center; */
+  border-radius: 20px;
+  /* font-size: 14px;
   font-weight: bold;
   color: white;
   margin: 5px;
-  padding: 3px;
+  padding: 3px; */
+  background-image: (url "./assets/matthew.jpg"); 
 `
 export const SearchCard = () => {
   const dispatch = useDispatch()
@@ -23,8 +24,9 @@ export const SearchCard = () => {
   return (
     <>
       <Button
-        onClick={(cardID) => {
-          dispatch(fetchCard(cardID))
+        onClick={() => {
+          const randomNumber = Math.floor(Math.random() * (30 - 1) + 1)
+          dispatch(fetchCard(randomNumber))
         }} />
     </>
   )

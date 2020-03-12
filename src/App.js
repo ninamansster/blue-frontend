@@ -26,10 +26,9 @@ export const App = () => {
               <h1> Small tips and efforts for blue planet doing</h1>
               <div>
                 <p>Pick a card from the deck to get inspo to do something for the planet</p>
-                <Link to="/flippingcards">
-                  <img className="deck" src="/assets/matthew.jpg" alt="cardfront" aria-label="card-display" />
+                <Link to="/cards/:cardID">
+                  <SearchCard />
                 </Link>
-                <SearchCard />
               </div>
             </section>
           </Route>
@@ -50,6 +49,10 @@ export const App = () => {
           </Route>
         </Router>
       </div>
+      <footer>
+        <p>Cloud photo from Unsplash</p>
+        <a className="madeby" href="mailto:ninamansster@gmail.com"> Final project by Nina Månsson at Technigo Frontend Bootcamp 2019.</a>
+      </footer>
     </Provider>
   )
 }

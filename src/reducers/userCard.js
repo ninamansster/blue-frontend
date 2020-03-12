@@ -1,8 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from 'reducers/ui'
 
-
-
+// The userCard should be used to fetch a random cardID
 export const userCard = createSlice({
   name: 'userCard',
   initialState: {
@@ -27,5 +26,3 @@ export const fetchCard = (cardID) => {
       })
   }
 }
-
-//8722700001232 this Tea-code you can put directly in the fetch instead of ${barcode}, to test that the bardoce fetch is working.
