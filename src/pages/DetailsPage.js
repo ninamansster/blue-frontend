@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components/macro'
 // import { Loading } from './components/Loading'
 import { Details } from './components/Details'
+import { BackIcon } from './components/Backicon'
 
 const Detailsection = styled.section`
   display: flex;
@@ -33,17 +35,21 @@ export const DetailsPage = () => {
   }, [cardID])
 
   if (loading) {
-    return <p>Page is loading</p>
+    return <h1>is loading</h1>
   }
 
   return (
-
-    <Detailsection>
-      <ThinnerCard
-        coverImage={card.image}
-        header={card.header}
-        title={card.title}
-        secondaryText={card.fact} />
-    </Detailsection>
+    <div className="page">
+      <Link className="back" to="/">
+        <BackIcon /> Back
+      </Link>
+      <Detailsection>
+        <ThinnerCard
+          coverImage={card.image}
+          header={card.header}
+          title={card.title}
+          secondaryText={card.fact} />
+      </Detailsection>
+    </div>
   )
 }

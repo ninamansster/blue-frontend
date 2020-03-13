@@ -41,6 +41,7 @@ box-shadow:  -13px 13px 26px #fc8a3d,
   flex-wrap: wrap;
   justify-content: center;
   background-color: #ff9420;
+  margin: 50px 0px;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -128,3 +129,29 @@ a {
   8px -8px 16px #ff8c3f;
 }
 
+/* PAGE NAVIGATION */
+.page {
+  position: relative;
+}
+
+.page .back {
+  display: inline-flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.page .back svg {
+  width: 30px;
+  margin-right: 1px;
+  transition: margin-right 0.2s ease-out;
+}
+
+.page .back:hover svg {
+  margin-right: 5px;
+}

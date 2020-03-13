@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-// import styled from 'styled-components'
-// import './flipp.css'
+import { BackIcon } from './components/Backicon'
 
-// const FullFlippingPage = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-// `
 // const URL = 'http://localhost:8080/cards'
 
 export const FlippingCardPage = () => {
@@ -23,36 +18,40 @@ export const FlippingCardPage = () => {
   }, [])
 
   return (
-
-    <section>
-      <h1>Pick a card</h1>
-      <main className="fullFlippingPage">
-        {cards.map((card) => (
-          <article className="flipCard" key={card.cardID}>
-            <div className="flipCardInner" key={card.cardID}>
-              <div className="flipCardFront">
-                <div key={card.cardID}>
-                  <h1> Blue Doing</h1>
+    <div className="page">
+      <Link className="back" to="/">
+        <BackIcon /> Back
+      </Link>
+      <section>
+        <h1>Pick a card</h1>
+        <main className="fullFlippingPage">
+          {cards.map((card) => (
+            <article className="flipCard" key={card.cardID}>
+              <div className="flipCardInner" key={card.cardID}>
+                <div className="flipCardFront">
+                  <div key={card.cardID}>
+                    <h1> Blue Doing</h1>
+                  </div>
+                </div>
+                <div className="flipCardBack">
+                  <Link key={card.cardID} to={`/cards/${card.cardID}`}>
+                    <div className="cardWrap">
+                      {card.image
+                        && <img
+                          key={card.cardID}
+                          src={card.image}
+                          alt="cardfront"
+                          aria-label="card-display" />}
+                      {card.title
+                        && <h1 className="cardWrapLink">{card.title}</h1>}
+                    </div>
+                  </Link>
                 </div>
               </div>
-              <div className="flipCardBack">
-                <Link key={card.cardID} to={`/cards/${card.cardID}`}>
-                  <div className="cardWrap">
-                    {card.image
-                      && <img
-                        key={card.cardID}
-                        src={card.image}
-                        alt="cardfront"
-                        aria-label="card-display" />}
-                    {card.title
-                      && <h1 className="cardWrapLink">{card.title}</h1>}
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </article>
-        ))}
-      </main>
-    </section>
+            </article>
+          ))}
+        </main>
+      </section>
+    </div>
   )
 }
