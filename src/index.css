@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: #67b3f3; */
+  background-color: #ff9420;
   color: black;
 }
 
@@ -28,11 +28,11 @@ article {
 .deck {
   width:200px;
   height: 300px;
-  margin: 50px 200px;
+  /* margin: 50px 200px; */
   border-radius: 20px;
-background: linear-gradient(225deg, #e6d0d8, #fff7ff);
-box-shadow:  31px 31px 62px #f7e0e9, 
--31px -31px 62px #ffeef7;
+background: linear-gradient(225deg, #e67d38, #ff9542);
+box-shadow:  -13px 13px 26px #fc8a3d, 
+13px -13px 26px #ff8c3f;
 }
 
 /* FLIPPING PAGE */
@@ -40,6 +40,7 @@ box-shadow:  31px 31px 62px #f7e0e9,
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #ff9420;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -50,9 +51,9 @@ box-shadow:  31px 31px 62px #f7e0e9,
   /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   border-radius: 20px;
-  background: linear-gradient(145deg, #5da1db, #6ec0ff);
-  box-shadow:  31px 31px 62px #5898cf, 
-             -31px -31px 62px #76ceff;
+  background: linear-gradient(225deg, #e67d38, #ff9542);
+box-shadow:   -8px 8px 16px #fc8a3d, 
+8px -8px 16px #ff8c3f;
 
 }
 
@@ -85,7 +86,7 @@ box-shadow:  31px 31px 62px #f7e0e9,
   background-color: #bbb;
   color: black;
   border-radius: 20px;
-  background-image: url(/assets/matthew.jpg);
+  /* background-image: url(/assets/matthew.jpg); */
 }
 
 /* Style the back side */
@@ -94,9 +95,9 @@ box-shadow:  31px 31px 62px #f7e0e9,
   color: white;
   transform: rotateY(180deg);
   border-radius: 20px;
-  background: linear-gradient(145deg, #5da1db, #6ec0ff);
-  box-shadow:  31px 31px 62px #5898cf, 
-             -31px -31px 62px #76ceff;
+  background: linear-gradient(225deg, #e67d38, #ff9542);
+box-shadow:   -8px 8px 16px #fc8a3d, 
+8px -8px 16px #ff8c3f;
 }
 
 /* Text, links and images on the back side */
@@ -112,9 +113,9 @@ a {
   margin: 120px 10px;
   padding: 10px;
   border-radius: 10px;
-background: linear-gradient(145deg, #5da1db, #6ec0ff);
-box-shadow:  6px 6px 6px #64aeec, 
-             -6px -6px 6px #6ab8fa;
+  background: linear-gradient(225deg, #e67d38, #ff9542);
+  box-shadow:   -8px 8px 16px #fc8a3d, 
+  8px -8px 16px #ff8c3f;
 }
 
 .cardWrap img{
@@ -123,7 +124,7 @@ box-shadow:  6px 6px 6px #64aeec,
   height: 300px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow:  31px 31px 62px #5898cf, 
-             -31px -31px 62px #76ceff;
+  box-shadow:   -8px 8px 16px #fc8a3d, 
+  8px -8px 16px #ff8c3f;
 }
 

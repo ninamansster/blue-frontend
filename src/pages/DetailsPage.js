@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import { Loading } from './components/Loading'
+// import { Loading } from './components/Loading'
 import { Details } from './components/Details'
 
 const Detailsection = styled.section`
@@ -33,7 +33,7 @@ export const DetailsPage = () => {
   }, [cardID])
 
   if (loading) {
-    return <Loading />
+    return <p>Page is loading</p>
   }
 
   return (
