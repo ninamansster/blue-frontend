@@ -9,61 +9,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #67b3f3;
-  color: #fff;
+  /* background: #67b3f3; */
+  color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-/* FLEX */
-/* .fullPage {
-  display: flex;
-  flex-wrap: wrap;
-} */
-
-/*FRONT*/
-
-/* .fullPage a {
-  position: relative;
-  /* width:25%; */
-  /* z-index: 0;
-  margin: 0;
-  color: #fff
-} */
-
-/* .fullPage a img {
-  width:100%;
-  
-} */
-
-/* .fullPage .frontInfo {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0,0,0,0.75);
-  display: none;
-  padding: 20px;
-}
-
-.fullPage .frontInfo h1 {
-  margin-top: auto;
-  margin-bottom: 0;
-  text-decoration: none;
-}
-
-.fullPage a:hover .frontInfo {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: flex-end;
-}  */
 
 article {
   width:200px;
@@ -75,9 +28,102 @@ article {
 .deck {
   width:200px;
   height: 300px;
-  margin: 50px 100px;
+  margin: 50px 200px;
+  border-radius: 20px;
+background: linear-gradient(225deg, #e6d0d8, #fff7ff);
+box-shadow:  31px 31px 62px #f7e0e9, 
+-31px -31px 62px #ffeef7;
+}
+
+/* FLIPPING PAGE */
+.fullFlippingPage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flipCard {
+  /* background-color: transparent; */
+  width: 200px;
+  height: 300px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  border-radius: 20px;
+  background: linear-gradient(145deg, #5da1db, #6ec0ff);
+  box-shadow:  31px 31px 62px #5898cf, 
+             -31px -31px 62px #76ceff;
+
+}
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront {
+  background-color: #bbb;
+  color: black;
+  border-radius: 20px;
+  background-image: url(/assets/matthew.jpg);
+}
+
+/* Style the back side */
+.flipCardBack{
+  /* background-color: dodgerblue; */
+  color: white;
+  transform: rotateY(180deg);
   border-radius: 20px;
   background: linear-gradient(145deg, #5da1db, #6ec0ff);
   box-shadow:  31px 31px 62px #5898cf, 
              -31px -31px 62px #76ceff;
 }
+
+/* Text, links and images on the back side */
+.cardWrap {
+  padding-top: 0px;
+}
+a {
+  text-decoration: none;
+  text-decoration-line: none;
+  color: black;
+}
+.cardWrapLink {
+  margin: 120px 10px;
+  padding: 10px;
+  border-radius: 10px;
+background: linear-gradient(145deg, #5da1db, #6ec0ff);
+box-shadow:  6px 6px 6px #64aeec, 
+             -6px -6px 6px #6ab8fa;
+}
+
+.cardWrap img{
+  color: white;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow:  31px 31px 62px #5898cf, 
+             -31px -31px 62px #76ceff;
+}
+

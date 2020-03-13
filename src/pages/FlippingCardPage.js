@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import './flipp.css'
+// import styled from 'styled-components'
+// import './flipp.css'
 
-const FullFlippingPage = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
+// const FullFlippingPage = styled.div`
+//   display: flex;
+//   flex-wrap: wrap;
+// `
 // const URL = 'http://localhost:8080/cards'
 
 export const FlippingCardPage = () => {
@@ -26,7 +26,7 @@ export const FlippingCardPage = () => {
 
     <section>
       <h1>Pick a card</h1>
-      <FullFlippingPage>
+      <main className="fullFlippingPage">
         {cards.map((card) => (
           <article className="flipCard" key={card.cardID}>
             <div className="flipCardInner" key={card.cardID}>
@@ -52,7 +52,7 @@ export const FlippingCardPage = () => {
             </div>
           </article>
         ))}
-      </FullFlippingPage>
+      </main>
     </section>
   )
 }

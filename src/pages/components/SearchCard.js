@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { fetchCard } from 'reducers/userCard'
 import styled from 'styled-components/macro'
 
-//Button styling
+// Button styling
 
 const Button = styled.button`
   width: 150px;
