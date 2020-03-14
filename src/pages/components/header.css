@@ -1,23 +1,25 @@
-/* HEADER */
+/* HEADER STYLING */
 
 header {
   /* background-image: url(https://images.unsplash.com/photo-1489537235181-fc05daed5805?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80); */
   background-image: url(https://images.unsplash.com/photo-1545163143-6083ece28229?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
-  object-fit: fill;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
   /* width: 100%; */
-  height: 800px;
+  /* height: auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }  
 
 .superHeader {
   font-size:40px;
   display: block;
-  font-family: "Roboto";
   font-weight: bolder;
   color: #ff8b3e;
-  padding: 10px 10px 50px 10px;
+  padding: 10px;
 }  
 
 .superText {
@@ -29,15 +31,31 @@ header {
 .superSteward {
   font-size:30px;
   display: block;
-  font-family: "Roboto";
   font-weight: bolder;
   color: white;
-  padding: 10px, 0px;
+  margin: 100px, 0px;
 }
 
 .superWrapper {
   display:flex;
   flex-direction: column;
   text-align: center; 
-  justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+/* TRANSISITON WHEN YOU PICK A CARD IN THE DECK */
+
+.superWrapper .deck {
+  /* width: 30px; */
+  /* width: 200px;
+  height: 300px; */
+  transition: width 1s height 1s ease-in-out;
+
+}
+
+.superWrapper .deck:hover {
+  width: 198px;
+  height: 290px;
+  box-shadow:  -12px 12px 2px #fc8a3d, 
+  8px -8px 2px #ff8c3f;
 }

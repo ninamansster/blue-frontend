@@ -30,7 +30,7 @@ export const FlippingCardPage = () => {
               <div className="flipCardInner" key={card.cardID}>
                 <div className="flipCardFront">
                   <div key={card.cardID}>
-                    <h1> Blue Doing</h1>
+                    <h1>What can I do?</h1>
                   </div>
                 </div>
                 <div className="flipCardBack">

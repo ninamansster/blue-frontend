@@ -18,6 +18,8 @@ code {
     monospace;
 }
 
+/* GENERAL */
+
 article {
   width:200px;
   height: 300px;
@@ -31,9 +33,13 @@ article {
   /* margin: 50px 200px; */
   border-radius: 20px;
 background: linear-gradient(225deg, #e67d38, #ff9542);
-box-shadow:  -13px 13px 26px #fc8a3d, 
-13px -13px 26px #ff8c3f;
+box-shadow:  -10px 10px 2px #fc8a3d, 
+10px -10px 2px #ff8c3f;
 }
+/* HEADER */
+
+/*see header.css*/
+
 
 /* FLIPPING PAGE */
 .fullFlippingPage {

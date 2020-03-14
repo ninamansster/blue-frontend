@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components/macro'
-// import { Loading } from './components/Loading'
 import { Details } from './components/Details'
 import { BackIcon } from './components/Backicon'
 
@@ -14,7 +12,7 @@ const Detailsection = styled.section`
 const ThinnerCard = styled(Details)`
   width: 300px;
   min-height:500px;
-  margin-top: 20px;
+  margin-top: 100px;
 `
 export const DetailsPage = () => {
   const [card, setCard] = useState([])
