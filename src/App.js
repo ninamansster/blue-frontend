@@ -5,7 +5,6 @@ import { DetailsPage } from './pages/DetailsPage'
 import { Header } from './pages/components/Header'
 import { TopMenu } from './pages/components/TopMenu'
 
-
 export const App = () => {
   return (
     <Router>

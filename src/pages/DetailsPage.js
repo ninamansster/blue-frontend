@@ -38,15 +38,18 @@ export const DetailsPage = () => {
 
   return (
     <div className="page">
-      <Link className="back" to="/">
+      <Link className="back" to="/flippingcards">
         <BackIcon /> Back
       </Link>
       <Detailsection>
         <ThinnerCard
           coverImage={card.image}
+          photographer={card.image_by}
           header={card.header}
           title={card.title}
-          secondaryText={card.fact} />
+          secondaryText={card.fact}
+          infoLink={card.info_link}
+          bookTip={card.book_tip} />
       </Detailsection>
     </div>
   )

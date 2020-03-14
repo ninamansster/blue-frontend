@@ -8,18 +8,20 @@ flex-direction: column;
 `
 const Dash = styled.div`
 border-radius: 2px;
-background: #1C5453;
-margin: 3px;
+background: #f1873d;
+margin: 4px;
 width: 20px;
-height: 5px;
+height: 3px;
 `
 
 export const BurgerMenu = () => {
   return (
     <SideMenu>
-      <Dash> <Link to="/flippingcards"> </Link></Dash>
-      <Dash />
-      <Dash />
+      <Link to="/flippingcards">
+        <Dash />
+        <Dash />
+        <Dash />
+      </Link>
     </SideMenu>
   )
 }

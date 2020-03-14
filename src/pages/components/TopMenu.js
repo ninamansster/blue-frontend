@@ -10,7 +10,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-background: #40BFAE;
+background: #021660;
 padding: 5px 10px;
 margin-top: 0px;
 height: 50px;
@@ -40,7 +40,7 @@ export const TopMenu = () => {
           <BurgerMenu />
         </Left>
         <Center>
-          Blue do
+          Blue good
         </Center>
         <Right>
           <Heart />

@@ -5,21 +5,37 @@ const MoreMenu = styled.div`
 display: flex;
 flex-direction: column;
 `
+const DotWrapper = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+`
 const Dot = styled.div`
 border-radius: 5px;
-background: #1C5453;
+background: #f1873d;
 margin: 3px;
 width: 7px;
 height: 7px;
+`
+const DotText = styled.div`
+color: #f1873d;
+font-size:12px;
+font-weight:500;
+margin: 1px;
 `
 
 export const More = () => {
   return (
     <>
       <MoreMenu>
-        <Dot />
-        <Dot />
-        <Dot />
+        <DotWrapper>
+          <Dot />
+          <DotText>LOG IN</DotText>
+        </DotWrapper>
+        <DotWrapper>
+          <Dot />
+          <DotText>REGISTER</DotText>
+        </DotWrapper>
       </MoreMenu>
     </>
   )
