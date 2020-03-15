@@ -8,7 +8,7 @@ flex-direction: column;
 `
 const Dash = styled.div`
 border-radius: 2px;
-background: #f1873d;
+background: #d5f5f4;
 margin: 4px;
 width: 20px;
 height: 3px;

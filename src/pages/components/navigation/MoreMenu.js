@@ -12,13 +12,13 @@ align-items: center;
 `
 const Dot = styled.div`
 border-radius: 5px;
-background: #f1873d;
+background: #d5f5f4;
 margin: 3px;
 width: 7px;
 height: 7px;
 `
 const DotText = styled.div`
-color: #f1873d;
+color: #d5f5f4;
 font-size:12px;
 font-weight:500;
 margin: 1px;

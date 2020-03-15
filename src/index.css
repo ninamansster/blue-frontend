@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ff9420;
+  background-color: #c7e5e4;
   color: black;
 }
 
@@ -32,9 +32,14 @@ article {
   height: 300px;
   /* margin: 50px 200px; */
   border-radius: 20px;
-background: linear-gradient(225deg, #e67d38, #ff9542);
-box-shadow:  -10px 10px 2px #fc8a3d, 
-10px -10px 2px #ff8c3f;
+  background: linear-gradient(225deg, #b3cecd, #d5f5f4);
+  box-shadow:  -10px 10px 20px #b9d5d4, 
+               10px -10px 20px #d5f5f4;
+}
+
+span {
+  font-size: 140px;
+  margin-top: 200px;
 }
 /* HEADER */
 
@@ -46,7 +51,7 @@ box-shadow:  -10px 10px 2px #fc8a3d,
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #ff9420;
+  background-color: #c7e5e4;
   margin: 50px 0px;
 }
 
@@ -58,9 +63,9 @@ box-shadow:  -10px 10px 2px #fc8a3d,
   /* border: 1px solid #f1f1f1; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   border-radius: 20px;
-  background: linear-gradient(225deg, #e67d38, #ff9542);
-box-shadow:   -8px 8px 16px #fc8a3d, 
-8px -8px 16px #ff8c3f;
+background: linear-gradient(225deg, #b3cecd, #d5f5f4);
+box-shadow:  -10px 10px 20px #b9d5d4, 
+             10px -10px 20px #d5f5f4;
 
 }
 
@@ -90,10 +95,12 @@ box-shadow:   -8px 8px 16px #fc8a3d,
 
 /* Style the front side (fallback if image is missing) */
 .flipCardFront {
-  background-color: #bbb;
+  background-color: #c7e5e4;
   color: black;
   border-radius: 20px;
-  /* background-image: url(/assets/matthew.jpg); */
+  /* background-image: url(/assets/thread1.jpg);
+  
+  background-repeat: no-repeat; */
 }
 
 /* Style the back side */
@@ -102,27 +109,29 @@ box-shadow:   -8px 8px 16px #fc8a3d,
   color: white;
   transform: rotateY(180deg);
   border-radius: 20px;
-  background: linear-gradient(225deg, #e67d38, #ff9542);
-box-shadow:   -8px 8px 16px #fc8a3d, 
-8px -8px 16px #ff8c3f;
+background: linear-gradient(225deg, #b3cecd, #d5f5f4);
+box-shadow:  -10px 10px 20px #b9d5d4, 
+             10px -10px 20px #d5f5f4;
 }
 
 /* Text, links and images on the back side */
 .cardWrap {
   padding-top: 0px;
 }
+
 a {
   text-decoration: none;
   text-decoration-line: none;
   color: black;
 }
+
 .cardWrapLink {
-  margin: 120px 10px;
+  margin: -250px 10px;
   padding: 10px;
-  border-radius: 10px;
-  background: linear-gradient(225deg, #e67d38, #ff9542);
-  box-shadow:   -8px 8px 16px #fc8a3d, 
-  8px -8px 16px #ff8c3f;
+  border-radius: 10px;  
+  background: linear-gradient(225deg, #b3cecd, #d5f5f4);
+  box-shadow:  -10px 10px 20px #b9d5d4, 
+             10px -10px 20px #d5f5f4;
 }
 
 .cardWrap img{
@@ -131,8 +140,8 @@ a {
   height: 300px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow:   -8px 8px 16px #fc8a3d, 
-  8px -8px 16px #ff8c3f;
+box-shadow:  -10px 10px 20px #b9d5d4, 
+             10px -10px 20px #d5f5f4;
 }
 
 /* PAGE NAVIGATION */
@@ -160,4 +169,9 @@ a {
 
 .page .back:hover svg {
   margin-right: 5px;
+}
+
+.cardPicker {
+  margin: 50px;
+  color: white;
 }

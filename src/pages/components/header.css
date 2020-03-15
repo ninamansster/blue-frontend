@@ -18,7 +18,7 @@ header {
   font-size:40px;
   display: block;
   font-weight: bolder;
-  color: #ff8b3e;
+  color: #d5f5f4;
   padding: 10px;
 }  
 
@@ -32,8 +32,8 @@ header {
   font-size:30px;
   display: block;
   font-weight: bolder;
-  color: #ff8b3e;
-  margin: 100px, 0px;
+  color: #b9d5d4;
+  margin: 30px, 0px;
 }
 
 .superWrapper {
@@ -49,13 +49,16 @@ header {
   /* width: 30px; */
   /* width: 200px;
   height: 300px; */
-  transition: width 1s height 1s ease-in-out;
+  /* transition: width 1s height 1s ease-in-out; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 
 }
 
 .superWrapper .deck:hover {
-  width: 198px;
-  height: 290px;
-  box-shadow:  -12px 12px 2px #fc8a3d, 
-  8px -8px 2px #ff8c3f;
+  /* width: 198px;
+  height: 290px; */
+  box-shadow:  -10px 10px 20px #b9d5d4, 
+               10px -10px 20px #d5f5f4;
+  transform: rotateY(20deg);
 }

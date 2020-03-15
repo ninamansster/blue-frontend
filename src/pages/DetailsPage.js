@@ -47,9 +47,8 @@ export const DetailsPage = () => {
           photographer={card.image_by}
           header={card.header}
           title={card.title}
-          secondaryText={card.fact}
-          infoLink={card.info_link}
-          bookTip={card.book_tip} />
+          secondaryText={card.thought}
+          infoLink={card.info_link} />
       </Detailsection>
     </div>
   )

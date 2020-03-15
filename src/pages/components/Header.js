@@ -8,10 +8,11 @@ export const Header = () => {
     <header>
       <h1 className="superHeader"> Tips and small efforts for blue planet doing</h1>
       <h2 className="superSteward"> Anyone can be a planet steward and take care of the planet</h2>
+      <h2 className="superSteward">Flip a card to get inspiration to do something good </h2>
       <div className="superWrapper">
         <Link to="/flippingcards">
           <div className="deck">
-            <h2 className="superText">Flip a card to get inspiration to do something good </h2>
+            <span className="Earth" role="img" aria-label="earth">🌄</span>
           </div>
         </Link>
       </div>
