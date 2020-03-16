@@ -33,7 +33,7 @@ export const DetailsPage = () => {
   }, [cardID])
 
   if (loading) {
-    return <h1>is loading</h1>
+    return <h1>Cards are loading slow today</h1>
   }
 
   return (
@@ -48,7 +48,8 @@ export const DetailsPage = () => {
           header={card.header}
           title={card.title}
           secondaryText={card.thought}
-          infoLink={card.info_link} />
+          infoLink={card.info_link}
+          likes={card.hearts} />
       </Detailsection>
     </div>
   )

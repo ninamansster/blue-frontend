@@ -37,13 +37,11 @@ const CoverImage = styled.img`
 `
 const Content = styled.div`
   padding: 20px;
-  
 `
 const CardWrapper = styled.div`
   box-sizing: border-box;
   width: 280px;
 `
-
 const Photographer = styled.p`
   font-size: 8px;
   color: #6b6b6b;
@@ -58,6 +56,10 @@ const LinkTo = styled.a`
   margin: 20px 0px;
   display: inline;
 `
+const Likes = styled.p`
+  font-size: 12px;
+  color: black;
+`
 export const Details = ({
   header,
   title,
@@ -65,7 +67,8 @@ export const Details = ({
   coverImage,
   photographer,
   className,
-  infoLink
+  infoLink,
+  likes
 }) => (
 
     <Container className={className}>
@@ -79,7 +82,8 @@ export const Details = ({
             {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
             {infoLink
               && <LinkTo>
-                <a href={infoLink}>More info at another site: {infoLink}</a></LinkTo>}
+                <a href={infoLink}>read more: {infoLink}</a></LinkTo>}
+            {likes && <Likes>{likes}</Likes>}
           </CardWrapper>
         </TitleBar>
       </Content>

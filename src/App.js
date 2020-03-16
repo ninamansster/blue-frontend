@@ -4,6 +4,7 @@ import { FlippingCardPage } from './pages/FlippingCardPage'
 import { DetailsPage } from './pages/DetailsPage'
 import { Header } from './pages/components/Header'
 import { TopMenu } from './pages/components/TopMenu'
+import { Like } from './pages/components/Like'
 
 export const App = () => {
   return (
@@ -17,6 +18,9 @@ export const App = () => {
       </Route>
       <Route path="/cards/:cardID" exact>
         <DetailsPage />
+      </Route>
+      <Route path="/like" exact>
+        <Like />
       </Route>
     </Router>
   )
