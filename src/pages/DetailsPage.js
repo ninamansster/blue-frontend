@@ -3,9 +3,11 @@ import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { Details } from './components/Details'
 import { BackIcon } from './components/Backicon'
+import { HeartCount } from './components/HeartCount'
 
 const Detailsection = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `
@@ -16,6 +18,7 @@ const ThinnerCard = styled(Details)`
 `
 export const DetailsPage = () => {
   const [card, setCard] = useState([])
+  const [cards, setCards] = useState([])
   const [loading, setLoading] = useState(false)
   const { cardID } = useParams()
 
@@ -36,6 +39,16 @@ export const DetailsPage = () => {
     return <h1>Cards are loading slow today</h1>
   }
 
+  const addLike = (likedId) => {
+    const updatedCard = cards.map((card) => {
+      if (card.cardID === likedId) {
+        card.hearts += 1
+      }
+      return card
+    })
+    setCards(updatedCard)
+  }
+
   return (
     <div className="page">
       <Link className="back" to="/flippingcards">
@@ -50,6 +63,10 @@ export const DetailsPage = () => {
           secondaryText={card.thought}
           infoLink={card.info_link}
           likes={card.hearts} />
+        <HeartCount
+          key={card._id}
+          card={card}
+          addLike={addLike} />
       </Detailsection>
     </div>
   )
