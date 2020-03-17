@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { Details } from './components/Details'
 import { BackIcon } from './components/Backicon'
-import { HeartCount } from './components/HeartCount'
 
 const Detailsection = styled.section`
   display: flex;
@@ -40,7 +39,7 @@ export const DetailsPage = () => {
   }
 
   const addLike = (likedId) => {
-    const updatedCard = cards.map((card) => {
+    const updatedCard = cards.map(() => {
       if (card.cardID === likedId) {
         card.hearts += 1
       }
@@ -48,6 +47,8 @@ export const DetailsPage = () => {
     })
     setCards(updatedCard)
   }
+
+  console.log(addLike)
 
   return (
     <div className="page">
@@ -63,10 +64,6 @@ export const DetailsPage = () => {
           secondaryText={card.thought}
           infoLink={card.info_link}
           likes={card.hearts} />
-        <HeartCount
-          key={card._id}
-          card={card}
-          addLike={addLike} />
       </Detailsection>
     </div>
   )

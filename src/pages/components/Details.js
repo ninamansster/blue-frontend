@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { HeartCount } from './HeartCount'
 
 const Container = styled.div`
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -60,6 +61,12 @@ const Likes = styled.p`
   font-size: 12px;
   color: black;
 `
+const LikeWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+`
+
 export const Details = ({
   header,
   title,
@@ -81,9 +88,13 @@ export const Details = ({
             {title && <Title>{title}</Title>}
             {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
             {infoLink
-              && <LinkTo>
-                <a href={infoLink}>read more: {infoLink}</a></LinkTo>}
-            {likes && <Likes>{likes}</Likes>}
+              && <LinkTo
+                href={infoLink}>{infoLink}
+              </LinkTo>}
+            <LikeWrapper>
+              <HeartCount />
+              {likes && <Likes>{likes}</Likes>}
+            </LikeWrapper>
           </CardWrapper>
         </TitleBar>
       </Content>

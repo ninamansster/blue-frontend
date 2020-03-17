@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import moment from 'moment'
 
 export const HeartCount = (cards) => {
   console.log('clicking', cards)
@@ -27,7 +26,6 @@ export const HeartCount = (cards) => {
           </button>
           <span> x {cards.hearts}</span>
         </div>
-        <p>{moment(cards.createdAt).fromNow()}</p>
       </div>
     </div>
   )

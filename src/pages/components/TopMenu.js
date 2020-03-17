@@ -2,34 +2,36 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { More } from './navigation/MoreMenu'
 import { BurgerMenu } from './navigation/BurgerMenu'
-import { Heart } from './navigation/HeartIcon'
 
 const Bar = styled.div`
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-background: #021660;
-padding: 5px 10px;
-margin-top: 0px;
-height: 50px;
-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #021660;
+  padding: 5px 10px;
+  margin-top: 0px;
+  height: 50px;
+  width: 100%;
 `
-
 const Left = styled.div`
-display: flex;
-flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 `
 const Center = styled.div`
-display: flex;
-flex-direction: row;
-
+  display: flex;
+  flex-direction: row;
 `
 const Right = styled.div`
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  `
+const CenterText = styled.p`
+  font-family: 'Manjari', sans-serif;
+  font-weight:bold;
+  font-size: 16px;
+  color:#d5f5f4;
 `
 
 export const TopMenu = () => {
@@ -40,10 +42,9 @@ export const TopMenu = () => {
           <BurgerMenu />
         </Left>
         <Center>
-          Blue good
+          <CenterText>BLUE DOING</CenterText>
         </Center>
         <Right>
-          <Heart />
           <More />
         </Right>
       </Bar>
