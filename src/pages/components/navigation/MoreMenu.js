@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
 const MoreMenu = styled.div`
@@ -28,14 +29,20 @@ export const More = () => {
   return (
     <>
       <MoreMenu>
-        <DotWrapper>
-          <Dot />
-          <DotText>LOG IN</DotText>
-        </DotWrapper>
-        <DotWrapper>
-          <Dot />
-          <DotText>REGISTER</DotText>
-        </DotWrapper>
+        <Link to="/login">
+
+          <DotWrapper>
+            <Dot />
+            <DotText>LOG IN</DotText>
+          </DotWrapper>
+        </Link>
+        <Link to="/register">
+          <DotWrapper>
+            <Dot />
+            <DotText>REGISTER</DotText>
+          </DotWrapper>
+        </Link>
+
       </MoreMenu>
     </>
   )

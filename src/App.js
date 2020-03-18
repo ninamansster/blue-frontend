@@ -4,7 +4,9 @@ import { FlippingCardPage } from './pages/FlippingCardPage'
 import { DetailsPage } from './pages/DetailsPage'
 import { Header } from './pages/components/Header'
 import { TopMenu } from './pages/components/TopMenu'
-// import { HeartCount } from './pages/components/HeartCount'
+import { NewUser } from './pages/components/Register'
+import { LoginUser } from './pages/components/Login'
+
 
 export const App = () => {
   return (
@@ -12,6 +14,12 @@ export const App = () => {
       <Route path="/" exact>
         <TopMenu />
         <Header />
+      </Route>
+      <Route path="/register" exact>
+        <NewUser />
+      </Route>
+      <Route path="/login" exact>
+        <LoginUser />
       </Route>
       <Route path="/flippingcards" exact>
         <FlippingCardPage />

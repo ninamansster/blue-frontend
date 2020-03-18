@@ -60,6 +60,7 @@ const LinkTo = styled.a`
 const Likes = styled.p`
   font-size: 12px;
   color: black;
+  padding-left: 10px;
 `
 const LikeWrapper = styled.div`
   display: flex;
@@ -75,7 +76,8 @@ export const Details = ({
   photographer,
   className,
   infoLink,
-  likes
+  hearts,
+  addLike
 }) => (
 
     <Container className={className}>
@@ -92,8 +94,9 @@ export const Details = ({
                 href={infoLink}>{infoLink}
               </LinkTo>}
             <LikeWrapper>
-              <HeartCount />
-              {likes && <Likes>{likes}</Likes>}
+              <HeartCount
+                addLike={addLike} />
+              {hearts && <Likes>{hearts}</Likes>}
             </LikeWrapper>
           </CardWrapper>
         </TitleBar>

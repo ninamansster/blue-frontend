@@ -42,7 +42,7 @@ export const TopMenu = () => {
           <BurgerMenu />
         </Left>
         <Center>
-          <CenterText>BLUE DOING</CenterText>
+          <CenterText>HAPPY BLUE DOING</CenterText>
         </Center>
         <Right>
           <More />
