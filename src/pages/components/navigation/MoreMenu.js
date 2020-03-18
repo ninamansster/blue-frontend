@@ -22,7 +22,7 @@ const DotText = styled.div`
   color: #d5f5f4;
   font-size:12px;
   font-weight:500;
-  margin: 1px;
+  margin: 1px 5px;
 `
 
 export const More = () => {
@@ -30,7 +30,6 @@ export const More = () => {
     <>
       <MoreMenu>
         <Link to="/login">
-
           <DotWrapper>
             <Dot />
             <DotText>LOG IN</DotText>

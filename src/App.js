@@ -6,7 +6,7 @@ import { Header } from './pages/components/Header'
 import { TopMenu } from './pages/components/TopMenu'
 import { NewUser } from './pages/components/Register'
 import { LoginUser } from './pages/components/Login'
-
+import { MyPage } from './pages/MyPage'
 
 export const App = () => {
   return (
@@ -27,8 +27,10 @@ export const App = () => {
       <Route path="/cards/:cardID" exact>
         <DetailsPage />
       </Route>
-      <Route path="/like" exact>
-        My page
+      <Route path="/mypage" exact>
+        <section>
+          <MyPage />
+        </section>
       </Route>
     </Router>
   )

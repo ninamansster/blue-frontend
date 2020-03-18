@@ -138,7 +138,6 @@ export const DetailsPage = () => {
                     </LinkTo>}
                   <LikeWrapper>
                     <HeartCount
-
                       style={{ background: card.hearts > 0 ? '#ffadad' : '#f3f1f1' }} />
                     <Likes>x {card.hearts}</Likes>
                   </LikeWrapper>
