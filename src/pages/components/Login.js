@@ -39,9 +39,9 @@ export const LoginUser = props => {
   }
 
   return (
-    <div>
+    <div className="superWrapper">
       <form onSubmit={onLoggedIn}>
-        <h3>Login with email and password</h3>
+        <h2 className="superSteward">Login with email and password</h2>
         <label>
           <input className="log-in" value={email} type="email" placeholder="Email" required onChange={event => setEmail(event.target.value)} />
         </label>
@@ -50,28 +50,13 @@ export const LoginUser = props => {
         </label>
         <button
           type="submit"
-          disabled={password.length < 4 ? true : false}
+          disabled={password.length < 4}
           onClick={onLoggedIn}>
           LOG IN
         </button>
       </form>
       {errorMessage && <div>{errorMessage}</div>}
-
     </div>
   )
 }
 
-
-// The following snippet accesses the current domain's local Storage object and adds a data item to it using Storage.setItem().
-// localStorage.setItem('accessToken');
-
-// The syntax for reading the localStorage item is as follows:
-// const accessToken = localStorage.getItem('accessToken');
-
-// The syntax for removing the localStorage item is as follows:
-// localStorage.removeItem('myCat');
-
-// The syntax for removing all the localStorage items is as follows:
-
-// // Clear all items
-// localStorage.clear();

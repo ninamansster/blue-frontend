@@ -1,9 +1,10 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 
-export const HeartCount = (props) => {
+export const HeartCount = () => {
   // console.log('clicking', cards)
-  const { addLike } = props
+  // const { addLike } = props
+  const history = useHistory()
   const { cardID } = useParams()
   // The handleLikefuncion is suposed to post a like and then send run the function addLike.
   // The functions are called from the Detailspage
@@ -14,7 +15,7 @@ export const HeartCount = (props) => {
       headers: { 'Content-Type': 'application/json' }
     })
       .then((res) => res.json())
-      .then(() => addLike(cardID))
+      .then(() => history.push(`/cards/${cardID}`))
   }
 
   return (

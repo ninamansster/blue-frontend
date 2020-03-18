@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 
-
-
 const URL = 'https://auth-ninadisa.herokuapp.com/users'
 //const URL = 'http://localhost:8000/users'
 
 export const NewUser = () => {
-  const [name, setName] = useState("")
-  const [password, setPassword] = useState("")
-  const [email, setEmail] = useState("")
-  const [errorMessage, setErrorMessage] = useState("")
-  const [message, setMessage] = useState("")
+  const [name, setName] = useState('')
+  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [errorMessage, setErrorMessage] = useState('')
+  const [message, setMessage] = useState('')
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -29,21 +27,21 @@ export const NewUser = () => {
       .then((json) => {
         console.log(json)
         setMessage(json.message)
-        setName("")
-        setEmail("")
-        setPassword("")
+        setName('')
+        setEmail('')
+        setPassword('')
       })
 
       .catch(err => {
-        console.log("error:", err)
+        console.log('error:', err)
         setErrorMessage(err.message)
       })
   }
 
   return (
-    <div>
+    <div className="superWrapper">
       <form onSubmit={handleSubmit}>
-        <h3>Fill in your name, email and password</h3>
+        <h2 className="superSteward">Fill in your name, email and password to get our newsletter</h2>
         <div className="login-form">
           <label>
             <input className="register" value={name} type="text" placeholder="My name > 4 characters" required onChange={event => setName(event.target.value)} />

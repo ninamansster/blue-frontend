@@ -80,9 +80,10 @@ const ThinnerCard = styled.div`
   min-height:500px;
   margin-top: 100px;
 `
+
 export const DetailsPage = () => {
   const [card, setCard] = useState([])
-  const [cards, setCards] = useState([])
+  // const [cards, setCards] = useState([])
   const [loading, setLoading] = useState(false)
   const { cardID } = useParams()
 
@@ -103,17 +104,17 @@ export const DetailsPage = () => {
     return <h1>Cards are loading slow today</h1>
   }
 
-  const addLike = (likedId) => {
-    const updatedCard = cards.map(() => {
-      if (card.cardID === likedId) {
-        card.hearts += 1
-      }
-      return card
-    })
-    setCards(updatedCard)
-  }
+  // const addLike = (likedId) => {
+  //   const updatedCard = cards.map(() => {
+  //     if (card.cardID === likedId) {
+  //       card.hearts += 1
+  //     }
+  //     return card
+  //   })
+  //   setCards(updatedCard)
+  // }
 
-  console.log(card)
+  // console.log(card)
 
   return (
     <div className="page">
@@ -137,10 +138,9 @@ export const DetailsPage = () => {
                     </LinkTo>}
                   <LikeWrapper>
                     <HeartCount
-                      style={{ background: card.hearts > 0 ? '#ffadad' : '#f3f1f1' }}
-                      addLike={addLike} />
-                    <Likes>x {card.hearts}</Likes>
 
+                      style={{ background: card.hearts > 0 ? '#ffadad' : '#f3f1f1' }} />
+                    <Likes>x {card.hearts}</Likes>
                   </LikeWrapper>
                 </CardWrapper>
               </TitleBar>
