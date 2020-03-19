@@ -7,6 +7,7 @@ import { TopMenu } from './pages/components/TopMenu'
 import { NewUser } from './pages/components/Register'
 import { LoginUser } from './pages/components/Login'
 import { MyPage } from './pages/MyPage'
+import { LogoutUser } from './pages/components/Logout'
 
 export const App = () => {
   return (
@@ -30,6 +31,7 @@ export const App = () => {
       <Route path="/mypage" exact>
         <section>
           <MyPage />
+          <LogoutUser />
         </section>
       </Route>
     </Router>

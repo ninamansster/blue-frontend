@@ -13,6 +13,7 @@ export const Header = () => {
       <div className="superWrapper">
         <Link to="/flippingcards">
           <div className="deck">
+            <h3 className="frontText">What can I do?</h3>
             <span className="Earth" role="img" aria-label="earth">🌍</span>
           </div>
         </Link>

@@ -40,7 +40,7 @@ export const MyPage = () => {
     <div className="page">
       <Link className="back" to="/">
         <BackIcon /> Back
-        </Link>
+      </Link>
       <div className="superWrapper">
 
         <div className="myPage">

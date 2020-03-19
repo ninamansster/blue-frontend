@@ -46,7 +46,7 @@ export const LoginUser = () => {
           <BackIcon /> Back
         </Link>
         <form onSubmit={onLoggedIn}>
-          <h2 className="superSteward">Login with email and password</h2>
+          <h2 className="superUser">Login with email and password</h2>
           <label>
             <input className="log-in" value={email} type="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
           </label>

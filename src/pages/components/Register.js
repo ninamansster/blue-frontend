@@ -43,22 +43,20 @@ export const NewUser = () => {
   return (
     <div className="page">
       <div className="superWrapper">
+        <Link className="back" to="/">
+          <BackIcon /> Back
+        </Link>
         <form onSubmit={handleSubmit}>
-          <Link className="back" to="/">
-            <BackIcon /> Back
-          </Link>
-          <h2 className="superSteward">Fill in your name, email and password to get a new card every day</h2>
-          <div className="login-form">
-            <label>
-              <input className="register" value={name} type="text" placeholder="My name > 4 characters" required onChange={(event) => setName(event.target.value)} />
-            </label>
-            <label>
-              <input className="register" value={email} type="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
-            </label>
-            <label>
-              <input className="register" value={password} type="password" placeholder="Password > 4 characters" required onChange={(event) => setPassword(event.target.value)} />
-            </label>
-          </div>
+          <h2 className="superUser">Fill in your name, email and password to get a new card every day</h2>
+
+          <input className="register" value={name} type="text" placeholder="My name > 4 characters" required onChange={(event) => setName(event.target.value)} />
+
+
+          <input className="register" value={email} type="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
+
+
+          <input className="register" value={password} type="password" placeholder="Password > 4 characters" required onChange={(event) => setPassword(event.target.value)} />
+
           <button
             className="button"
             type="submit"

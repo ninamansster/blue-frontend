@@ -41,12 +41,17 @@ box-shadow:  -10px 10px 10px #18184d,
 }
 
 span {
-  font-size: 140px;
-  margin-top: 200px;
+  font-size: 160px;
+  /* margin-top: 200px; */
 }
-/* HEADER */
 
-/*see header.css*/
+.frontText {
+  font-size: 20px;
+  padding: 20px 5px; 
+  font-family: 'Manjari', sans-serif;
+  color: white;
+}
+
 /* HEADER STYLING */
 
 header {
@@ -174,13 +179,9 @@ header {
 
 /* Style the front side (fallback if image is missing) */
 .flipCardFront {
-  /* background-color: #c7e5e4; */
   background: linear-gradient(225deg, #252678, #2c2d8e);
   color: white;
   border-radius: 20px;
-  /* background-image: url(/assets/thread1.jpg);
-  
-  background-repeat: no-repeat; */
 }
 
 /* Style the back side */
@@ -293,9 +294,25 @@ box-shadow:  -10px 10px 10px #18184d,
 }
 
 /* REGISTER AND LOGIN */
-
+section:not(a) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.superUser {
+  font-family: 'Manjari', sans-serif;
+  font-size:30px;
+  font-weight: bolder;
+  color: #b9d5d4;
+  margin: 20px;
+  letter-spacing: 2px;
+}
 form {
   margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .myPage {
@@ -310,6 +327,10 @@ form {
   max-width: 300px;
 }
 
+form button {
+  max-width: 300px;
+}
+
 button {
   font-size: 20px;
   appearance: none;
@@ -321,7 +342,6 @@ button {
   padding: 10px 30px;
   font-weight: bold;
   margin-top: 30px;
-  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -373,6 +393,34 @@ input {
 
 /* MEDIAQUERIES*/
 
+
+@media (max-width: 900px) {
+    header {
+      margin:5px
+    }  
+    
+    .superHeader {
+      letter-spacing: 1px;
+      font-size: 35px;
+    }  
+    
+    .superText {
+      font-size:15px;
+    }
+    
+    .superSteward {
+      font-size:30px;
+    }
+    
+    .superWrapper {
+      display:flex;
+      flex-direction: column;
+      align-items: center; 
+      justify-content: space-between;
+    }
+  
+}
+
 @media (max-width: 660px) {
   header {
     margin:5px
@@ -394,7 +442,13 @@ input {
   .superWrapper {
     display:flex;
     flex-direction: column;
-    text-align: center; 
+    align-items: center; 
     justify-content: space-between;
   }
+
+  .superUser {
+    font-size:20px;
+    margin: 15px;
+  }
+
 }
