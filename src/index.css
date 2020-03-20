@@ -429,7 +429,7 @@ input {
   
   .superHeader {
     letter-spacing: 1px;
-    font-size: 30px;
+    font-size: 26px;
   }  
   
   .superText {
@@ -450,6 +450,20 @@ input {
   .superUser {
     font-size:20px;
     margin: 15px;
+  }
+
+  .fullFlippingPage {
+    margin: 20px 0px;
+  }
+
+  .cardPicker {
+    margin-top: 100px;
+  }
+
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
 }
