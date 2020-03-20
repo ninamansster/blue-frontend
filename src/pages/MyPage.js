@@ -53,7 +53,10 @@ export const MyPage = () => {
           <article>
             <>
               {errorMessage && <div className="error">{errorMessage}</div>}
-              <p className="superText">{message}</p>
+              <div className="deck">
+                <p className="frontText">{message}</p>
+              </div>
+
             </>
           </article>
         </div>
