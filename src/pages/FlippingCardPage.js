@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BackIcon } from './components/Backicon'
-// import { HeartCount } from './components/HeartCount'
 
 // const URL = 'http://localhost:8080/cards'
 
@@ -10,7 +9,7 @@ export const FlippingCardPage = () => {
 
   useEffect(() => {
     fetch(
-      'http://localhost:8080/cards'
+      'https://happybluecards.herokuapp.com/cards'
     )
       .then((res) => res.json())
       .then((json) => {

@@ -47,12 +47,8 @@ export const LoginUser = () => {
         </Link>
         <form onSubmit={onLoggedIn}>
           <h2 className="superUser">Login with email and password</h2>
-          <label>
-            <input className="log-in" value={email} type="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
-          </label>
-          <label>
-            <input className="log-in" value={password} type="password" placeholder="Password" required onChange={(event) => setPassword(event.target.value)} />
-          </label>
+          <input className="log-in" value={email} type="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
+          <input className="log-in" value={password} type="password" placeholder="Password" required onChange={(event) => setPassword(event.target.value)} />
           <button
             type="submit"
             disabled={password.length < 4}

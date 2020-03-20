@@ -280,8 +280,8 @@ box-shadow:  -10px 10px 10px #18184d,
 
 .heartButton {
   background-color:#b9d5d4;
-  border-radius: 50%;
-  padding:8px 10px 8px 13px;
+  border-radius: 20px;
+  padding:10px;
   font-size: 20px;
 }
 
@@ -298,6 +298,7 @@ section:not(a) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 .superUser {
   font-family: 'Manjari', sans-serif;

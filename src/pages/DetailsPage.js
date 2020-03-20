@@ -80,6 +80,7 @@ const ThinnerCard = styled.div`
   min-height:500px;
   margin-top: 100px;
 `
+// http://localhost:8080/cards/${cardID}
 
 export const DetailsPage = () => {
   const [card, setCard] = useState([])
@@ -90,7 +91,7 @@ export const DetailsPage = () => {
   useEffect(() => {
     setLoading(true)
     fetch(
-      `http://localhost:8080/cards/${cardID}`
+      `https://happybluecards.herokuapp.com/cards/${cardID}`
     )
       .then((res) => res.json())
       .then((json) => {
@@ -134,7 +135,8 @@ export const DetailsPage = () => {
                   {card.thought && <SecondaryText>{card.thought}</SecondaryText>}
                   {card.info_link
                     && <LinkTo
-                      href={card.info_link}>{card.info_link}
+                      href={card.info_link}>
+                      {card.info_link}
                     </LinkTo>}
                   <LikeWrapper>
                     <HeartCount

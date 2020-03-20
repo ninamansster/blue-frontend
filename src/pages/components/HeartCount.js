@@ -1,6 +1,8 @@
 import React from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 
+// http://localhost:8080/${cardID}/like
+
 export const HeartCount = (props) => {
   // console.log('clicking', cards)
   const { addLike } = props
@@ -8,8 +10,9 @@ export const HeartCount = (props) => {
   const { cardID } = useParams()
   // The handleLikefuncion is suposed to post a like and then send run the function addLike.
   // The functions are called from the Detailspage
+  // This does not work at them moment
   const handleLike = () => {
-    fetch(`http://localhost:8080/${cardID}/like`, {
+    fetch(`https://happybluecards.herokuapp.com/${cardID}/like`, {
       method: 'POST',
       body: '',
       headers: { 'Content-Type': 'application/json' }
@@ -29,7 +32,7 @@ export const HeartCount = (props) => {
             className="heartButton"
             type="submit"
             onClick={handleLike}>
-            <span className="like" role="img" aria-label="Heart">💚</span>
+            <span className="like" role="img" aria-label="Heart">I will do this 💚</span>
           </button>
         </div>
       </div>
