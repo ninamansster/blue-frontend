@@ -26,9 +26,9 @@ export const App = () => {
               <h1> Small tips and efforts for blue planet doing</h1>
               <div>
                 <p>Pick a card from the deck to get inspo to do something for the planet</p>
-                <Link to="/cards/:cardID">
-                  <SearchCard />
-                </Link>
+
+                <SearchCard />
+
               </div>
             </section>
           </Route>

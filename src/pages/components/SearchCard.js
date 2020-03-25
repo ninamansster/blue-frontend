@@ -25,8 +25,8 @@ export const SearchCard = () => {
     <>
       <Button
         onClick={() => {
-          const randomNumber = Math.floor(Math.random() * (30 - 1) + 1)
-          dispatch(fetchCard(randomNumber))
+          const cardID = Math.floor(Math.random() * (30 - 1) + 1)
+          dispatch(fetchCard(cardID))
         }} />
     </>
   )
