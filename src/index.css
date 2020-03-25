@@ -95,6 +95,13 @@ header {
   letter-spacing: 2px;
 }
 
+.superWrapper .superHeader {
+  display:flex;
+  flex-direction: column;
+  /* text-align: left;  */
+  justify-content: space-evenly;
+}
+
 .superWrapper {
   display:flex;
   flex-direction: column;
