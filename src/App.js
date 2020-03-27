@@ -11,7 +11,6 @@ import { TopMenu } from './pages/components/TopMenu'
 import { NewUser } from './pages/components/Register'
 import { LoginUser } from './pages/components/Login'
 import { MyPage } from './pages/MyPage'
-import { LogoutUser } from './pages/components/Logout'
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -41,10 +40,7 @@ export const App = () => {
           <DetailsPage />
         </Route>
         <Route path="/mypage" exact>
-          <section>
-            <MyPage />
-            <LogoutUser />
-          </section>
+          <MyPage />
         </Route>
       </Router>
     </Provider>

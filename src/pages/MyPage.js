@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { BackIcon } from './components/Backicon'
 import { SearchCard } from './components/SearchCard'
 import { RandomPage } from './RandomPage'
+import { LogoutUser } from './components/Logout'
+
 
 const URL = 'https://auth-ninadisa.herokuapp.com/secrets'
 // const URL = 'http://localhost:8000/secrets'
@@ -43,31 +45,33 @@ export const MyPage = () => {
       <Link className="back" to="/">
         <BackIcon /> Back
       </Link>
-      <div className="superWrapper">
-
-        <div className="myPage">
-          <button
-            className="secret-button"
-            type="submit"
-            onClick={handleSecret}>
-            Give me a bonus card
-          </button>
-          <article>
-            <>
-              {errorMessage && <div className="error">{errorMessage}</div>}
-              <div className="deck">
-                <p className="frontText">{message}</p>
-              </div>
-              <div className="superWrapper">
-                <h2 className="superSteward">Get a random card </h2>
-                <SearchCard />
-                <RandomPage />
-              </div>
-
-            </>
-          </article>
+      <div className="myPage">
+        <div>
+          <SearchCard />
+          <RandomPage />
         </div>
+
+
+        <button
+          className="secret-button"
+          type="submit"
+          onClick={handleSecret}>
+          Give me a bonus card
+          </button>
+        <article>
+          <>
+            {errorMessage && <div className="error">{errorMessage}</div>}
+            <div className="deck">
+              <p className="frontText">{message}</p>
+            </div>
+
+          </>
+        </article>
+        <LogoutUser />
       </div>
+
     </div>
+
+
   )
 }
