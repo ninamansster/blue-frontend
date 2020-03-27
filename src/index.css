@@ -33,11 +33,9 @@ article {
   height: 300px;
   /* margin: 50px 200px; */
   border-radius: 20px;
-  
-  border-radius: 20px;
-background: linear-gradient(225deg, #252678, #2c2d8e);
-box-shadow:  -10px 10px 10px #18184d, 
-             10px -10px 10px #3a3cbd;
+  background: linear-gradient(225deg, #252678, #2c2d8e);
+  box-shadow:  -10px 10px 10px #18184d, 
+              10px -10px 10px #3a3cbd;
 }
 
 span {
@@ -86,7 +84,7 @@ header {
   letter-spacing: 1px;
 }
 
-.superSteward {
+.superSteward, .myPageTitle {
   font-family: 'Manjari', sans-serif;
   font-size:30px;
   font-weight: bolder;
@@ -235,7 +233,7 @@ box-shadow:  -10px 10px 10px #18184d,
 }
 
 /* DETAILS PAGE AND RANDOM PAGE */
-.Container {
+.Container, .mySection {
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   border-radius: 20px;
@@ -378,13 +376,8 @@ box-shadow:  -10px 10px 10px #18184d,
   text-align: center;
 }
 
-/* REGISTER AND LOGIN */
-section:not(a) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
+/* REGISTER AND LOGIN AND MYPAGE */
+
 .superUser {
   font-family: 'Manjari', sans-serif;
   font-size:30px;
@@ -401,17 +394,6 @@ form {
   justify-content: center;
 }
 
-.myPage {
-  /* margin-top: 150px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.myPage button {
-  max-width: 400px;
-}
 
 form button {
   max-width: 300px;
@@ -477,6 +459,37 @@ input {
   margin-top: 150px;
 }
 
+.myPageWrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* .myPageTitle {
+  defined on top with the other headers
+} */
+
+.myPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.myPage button {
+  max-width: 400px;
+}
+
+.mySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin: 30px 20px;
+  padding: 10px;
+}
+
 /* MEDIAQUERIES*/
 
 
@@ -503,6 +516,14 @@ input {
       flex-direction: column;
       align-items: center; 
       justify-content: space-between;
+    }
+
+    .myPage {
+      /* margin-top: 150px; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   
 }

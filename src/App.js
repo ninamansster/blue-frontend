@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { ui } from 'reducers/ui'
 import { userCard } from 'reducers/cards'
+import { tasks } from 'reducers/Task'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { FlippingCardPage } from './pages/FlippingCardPage'
 import { DetailsPage } from './pages/DetailsPage'
@@ -14,7 +15,8 @@ import { MyPage } from './pages/MyPage'
 
 const reducer = combineReducers({
   ui: ui.reducer,
-  cards: userCard.reducer
+  cards: userCard.reducer,
+  tasks: tasks.reducer
 })
 
 export const store = configureStore({ reducer })

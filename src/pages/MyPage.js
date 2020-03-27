@@ -4,7 +4,8 @@ import { BackIcon } from './components/Backicon'
 import { SearchCard } from './components/SearchCard'
 import { RandomPage } from './RandomPage'
 import { LogoutUser } from './components/Logout'
-
+import { AddTaskForm } from './components/AddTaskForm'
+import { Tasks } from './components/TaskList'
 
 const URL = 'https://auth-ninadisa.herokuapp.com/secrets'
 // const URL = 'http://localhost:8000/secrets'
@@ -45,33 +46,37 @@ export const MyPage = () => {
       <Link className="back" to="/">
         <BackIcon /> Back
       </Link>
-      <div className="myPage">
-        <div>
-          <SearchCard />
-          <RandomPage />
+      <main className="myPageWrapper">
+        <h1 className="myPageTitle">Welcome to your page</h1>
+        <div className="myPage">
+          <section className="mySection">
+            <SearchCard />
+            <RandomPage />
+          </section>
+          <section className="mySection">
+            <AddTaskForm />
+            <Tasks />
+          </section>
+          <section className="mySection">
+            <button
+              className="secret-button"
+              type="submit"
+              onClick={handleSecret}>
+              Show me a secret saying
+            </button>
+            <article>
+              <>
+                {errorMessage && <div className="error">{errorMessage}</div>}
+                <div className="deck">
+                  <p className="frontText">{message}</p>
+                </div>
+              </>
+            </article>
+          </section>
+
         </div>
-
-
-        <button
-          className="secret-button"
-          type="submit"
-          onClick={handleSecret}>
-          Give me a bonus card
-          </button>
-        <article>
-          <>
-            {errorMessage && <div className="error">{errorMessage}</div>}
-            <div className="deck">
-              <p className="frontText">{message}</p>
-            </div>
-
-          </>
-        </article>
         <LogoutUser />
-      </div>
-
+      </main>
     </div>
-
-
   )
 }
