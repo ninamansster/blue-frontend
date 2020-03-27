@@ -138,11 +138,7 @@ export const DetailsPage = () => {
                   {card.header && <Header>{card.header}</Header>}
                   {card.title && <Title>{card.title}</Title>}
                   {card.thought && <SecondaryText>{card.thought}</SecondaryText>}
-                  {card.info_link
-                    && <LinkTo
-                      href={card.info_link}>
-                      {card.info_link}
-                    </LinkTo>}
+                  {card.info_link && <LinkTo href={card.info_link}> {card.info_link} </LinkTo>}
                   <LikeWrapper>
                     <HeartCount
                       addLike={addLike}

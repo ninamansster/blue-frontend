@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux'
 import styled from 'styled-components/macro'
 // import { Loading } from './components/Loading'
 import { BackIcon } from './components/Backicon'
+// import {SearchCard } from './reducers/cards'
+
 
 const Container = styled.div`
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -74,7 +76,7 @@ const ThinnerCard = styled.div`
 // http://localhost:8080/cards/${cardID}
 
 export const RandomPage = () => {
-  const card = useSelector((state) => state.userCard.card)
+  const card = useSelector((state) => state.cards.userCard)
 
   // const addLike = (likedId) => {
   //   const updatedCard = cards.map(() => {
@@ -96,7 +98,7 @@ export const RandomPage = () => {
       <Detailsection>
         <ThinnerCard>
           <Container>
-            {card.card.image && <CoverImage src={card.card.image} />}
+            {card.image && <CoverImage src={card.image} />}
             {card.image_by && <Photographer>{card.image_by}</Photographer>}
             <Content>
               <TitleBar>
@@ -104,11 +106,7 @@ export const RandomPage = () => {
                   {card.header && <Header>{card.header}</Header>}
                   {card.title && <Title>{card.title}</Title>}
                   {card.thought && <SecondaryText>{card.thought}</SecondaryText>}
-                  {card.info_link
-                    && <LinkTo
-                      href={card.info_link}>
-                      {card.info_link}
-                    </LinkTo>}
+                  {card.info_link && <LinkTo href={card.info_link}> {card.info_link}</LinkTo>}
                 </CardWrapper>
               </TitleBar>
             </Content>

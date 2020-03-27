@@ -15,7 +15,7 @@ import { LogoutUser } from './pages/components/Logout'
 
 const reducer = combineReducers({
   ui: ui.reducer,
-  products: userCard.reducer
+  cards: userCard.reducer
 })
 
 export const store = configureStore({ reducer })
@@ -42,6 +42,7 @@ export const App = () => {
             <DetailsPage />
           </Route>
           <Route path="/mypage" exact>
+            <TopMenu />
             <section>
               <MyPage />
               <LogoutUser />

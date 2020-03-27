@@ -5,7 +5,7 @@ import { ui } from 'reducers/ui'
 export const userCard = createSlice({
   name: 'userCard',
   initialState: {
-    userCard: []
+    userCard: {}
   },
 
   reducers: {

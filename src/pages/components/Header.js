@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 // eslint-disable-next-line import/named
 import { SearchCard } from './SearchCard'
+import { RandomPage } from '../RandomPage'
+
 
 
 export const Header = () => {
@@ -23,6 +25,7 @@ export const Header = () => {
       <div className="superWrapper">
         <h2 className="superSteward">Get a random card </h2>
         <SearchCard />
+        <RandomPage />
 
       </div>
       <div className="superWrapper">

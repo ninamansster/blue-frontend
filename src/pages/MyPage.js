@@ -38,9 +38,7 @@ export const MyPage = () => {
 
   return (
     <div className="page">
-      <Link className="back" to="/">
-        <BackIcon /> Back
-      </Link>
+      <Link className="back" to="/"> <BackIcon /> Back </Link>
       <div className="superWrapper">
 
         <div className="myPage">
@@ -49,18 +47,18 @@ export const MyPage = () => {
             type="submit"
             onClick={handleSecret}>
             Give me a bonus card
-          </button>
+            </button>
           <article>
             <>
               {errorMessage && <div className="error">{errorMessage}</div>}
               <div className="deck">
                 <p className="frontText">{message}</p>
               </div>
-
             </>
           </article>
         </div>
       </div>
     </div>
+
   )
 }
