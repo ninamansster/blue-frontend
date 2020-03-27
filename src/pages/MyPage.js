@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BackIcon } from './components/Backicon'
+import { SearchCard } from './components/SearchCard'
+import { RandomPage } from './RandomPage'
 
 const URL = 'https://auth-ninadisa.herokuapp.com/secrets'
 // const URL = 'http://localhost:8000/secrets'
@@ -55,6 +57,11 @@ export const MyPage = () => {
               {errorMessage && <div className="error">{errorMessage}</div>}
               <div className="deck">
                 <p className="frontText">{message}</p>
+              </div>
+              <div className="superWrapper">
+                <h2 className="superSteward">Get a random card </h2>
+                <SearchCard />
+                <RandomPage />
               </div>
 
             </>
