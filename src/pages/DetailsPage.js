@@ -125,7 +125,7 @@ export const DetailsPage = () => {
       <Detailsection>
         <ThinnerCard>
           <Container>
-            {card.image && <CoverImage src={card.image} />}
+            {card.image && <CoverImage src={card.image} aria-label="image about the card" />}
             {card.image_by && <Photographer>{card.image_by}</Photographer>}
             <Content>
               <TitleBar>
@@ -133,15 +133,11 @@ export const DetailsPage = () => {
                   {card.header && <Header>{card.header}</Header>}
                   {card.title && <Title>{card.title}</Title>}
                   {card.thought && <SecondaryText>{card.thought}</SecondaryText>}
-                  {card.info_link
-                    && <LinkTo
-                      href={card.info_link}>
-                      {card.info_link}
-                    </LinkTo>}
+                  {card.info_link && <LinkTo href={card.info_link}>{card.info_link}</LinkTo>}
                   <LikeWrapper>
                     <HeartCount
                       addLike={addLike}
-                      style={{ background: card.hearts > 0 ? 'white' : 'black' }} />
+                      style={{ background: card.hearts > 0 ? 'white' : 'grey' }} />
                     <Likes>x {card.hearts}</Likes>
                   </LikeWrapper>
                 </CardWrapper>

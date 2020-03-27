@@ -30,7 +30,7 @@ export const FlippingCardPage = () => {
               <div className="flipCardInner" key={card.cardID}>
                 <div className="flipCardFront">
                   <div key={card.cardID}>
-                    <h3 className="frontText">What can I do?</h3>
+                    <h3 className="frontText" aria-label="text on card">What can I do?</h3>
                     <span className="Earth" role="img" aria-label="earth">🌍</span>
                   </div>
                 </div>
@@ -42,7 +42,7 @@ export const FlippingCardPage = () => {
                           key={card.cardID}
                           src={card.image}
                           alt="cardfront"
-                          aria-label="card-display" />}
+                          aria-label="flipping card is displayed" />}
                       {card.title
                         && <h1 className="cardWrapLink">{card.title}</h1>}
                     </div>
