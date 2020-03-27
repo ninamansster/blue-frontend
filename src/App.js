@@ -12,8 +12,6 @@ import { NewUser } from './pages/components/Register'
 import { LoginUser } from './pages/components/Login'
 import { MyPage } from './pages/MyPage'
 import { LogoutUser } from './pages/components/Logout'
-import { RandomPage } from './pages/RandomPage'
-
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -43,9 +41,6 @@ export const App = () => {
           <Route path="/cards/:cardID" exact>
             <DetailsPage />
           </Route>
-          <Route path="/randomcard" exact>
-            <RandomPage />
-          </Route>
           <Route path="/mypage" exact>
             <section>
               <MyPage />
@@ -54,6 +49,6 @@ export const App = () => {
           </Route>
         </Router>
       </div>
-    </Provider >
+    </Provider>
   )
 }

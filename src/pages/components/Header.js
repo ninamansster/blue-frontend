@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 // eslint-disable-next-line import/named
 import { SearchCard } from './SearchCard'
-import { RandomPage } from '../RandomPage'
+
 
 export const Header = () => {
   return (
@@ -23,7 +23,7 @@ export const Header = () => {
       <div className="superWrapper">
         <h2 className="superSteward">Get a random card </h2>
         <SearchCard />
-        <RandomPage />
+
       </div>
       <div className="superWrapper">
         <h2 className="superSteward">Anyone can be a planet steward and take care of the planet</h2>
