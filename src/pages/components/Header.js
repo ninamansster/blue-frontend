@@ -22,6 +22,9 @@ export const Header = () => {
         <h2 className="superSteward">Blue doing supports actions for planet stewardship </h2>
         <Link to="/cards/27"><p>What is earth biosphere stewardship?</p></Link>
       </div>
+      <footer>
+        <a className="madeby" href="mailto:ninamansster@gmail.com"> Final project by Nina Månsson at Technigo Frontend Bootcamp 2019-2020.</a>
+      </footer>
     </header>
   )
 }

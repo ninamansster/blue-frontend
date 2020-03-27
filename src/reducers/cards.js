@@ -18,7 +18,7 @@ export const userCard = createSlice({
 export const fetchCard = (cardID) => {
   return (dispatch) => {
     dispatch(ui.actions.setLoading(true))
-    fetch(`http://localhost:8080/cards/${cardID}`)
+    fetch(`https://happybluecards.herokuapp.com/cards/${cardID}`)
       .then((res) => res.json())
       .then((json) => {
         dispatch(userCard.actions.setuserCard(json))
