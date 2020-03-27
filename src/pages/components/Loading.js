@@ -1,28 +1,13 @@
 import React from 'react'
-import styled from 'styled-components/macro'
+import { useSelector } from 'react-redux'
+import Loader from 'react-loader-spinner'
 
-const rotate = styled.keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-  `
-const Rotate = styled.div`
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: ${rotate} 2s linear infinite;
-`
+// This is the spinner that is shown if the fetch takes some time.
+// In the Redux inspector it is visible when you play the fetch.
+// Available different spinner types: https://www.npmjs.com/package/react-loader-spinner
 
 export const Loading = () => {
-  return (
-    <Rotate>
-      <span>&lt; mmmmm &gt;</span>
-    </Rotate>
-  )
+  const isLoading = useSelector((state) => state.ui.isLoading)
+
+  return <>{isLoading && (<Loader type="Puff" color="blue" height={60} width={30} />)}</>
 }

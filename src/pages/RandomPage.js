@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import styled from 'styled-components/macro'
 // import { Loading } from './components/Loading'
 import { BackIcon } from './components/Backicon'
-import { HeartCount } from './components/HeartCount'
 
 const Container = styled.div`
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -60,16 +60,6 @@ const LinkTo = styled.a`
   margin: 20px 0px;
   display: inline;
 `
-const Likes = styled.p`
-  font-size: 12px;
-  color: black;
-  padding-left: 10px;
-`
-const LikeWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-`
 const Detailsection = styled.section`
   display: flex;
   flex-direction: column;
@@ -83,54 +73,30 @@ const ThinnerCard = styled.div`
 `
 // http://localhost:8080/cards/${cardID}
 
-export const DetailsPage = () => {
-  const [card, setCard] = useState([])
-  const [cards, setCards] = useState([])
-  const [loading, setLoading] = useState(false)
-  const { cardID } = useParams()
+export const RandomPage = () => {
+  const card = useSelector((state) => state.userCard.card)
 
-  useEffect(() => {
-    setLoading(true)
-    fetch(
-      `https://happybluecards.herokuapp.com/cards/${cardID}`
-    )
-      .then((res) => res.json())
-      .then((json) => {
-        setCard(json)
-        setLoading(false)
-        console.log(json)
-      })
-  }, [cardID])
-
-  if (loading) {
-    return <h1>Cards are loading slow today</h1>
-  }
-
-  // if (loading) {
-  //   return <Loading />
+  // const addLike = (likedId) => {
+  //   const updatedCard = cards.map(() => {
+  //     if (card.cardID === likedId) {
+  //       card.hearts += 1
+  //     }
+  //     return card
+  //   })
+  //   setCards(updatedCard)
   // }
-
-  const addLike = (likedId) => {
-    const updatedCard = cards.map(() => {
-      if (card.cardID === likedId) {
-        card.hearts += 1
-      }
-      return card
-    })
-    setCards(updatedCard)
-  }
 
   // console.log(card)
 
   return (
     <div className="page">
-      <Link className="back" to="/flippingcards">
+      <Link className="back" to="/">
         <BackIcon /> Back
       </Link>
       <Detailsection>
         <ThinnerCard>
           <Container>
-            {card.image && <CoverImage src={card.image} />}
+            {card.card.image && <CoverImage src={card.card.image} />}
             {card.image_by && <Photographer>{card.image_by}</Photographer>}
             <Content>
               <TitleBar>
@@ -143,12 +109,6 @@ export const DetailsPage = () => {
                       href={card.info_link}>
                       {card.info_link}
                     </LinkTo>}
-                  <LikeWrapper>
-                    <HeartCount
-                      addLike={addLike}
-                      style={{ background: card.hearts > 0 ? 'white' : 'black' }} />
-                    <Likes>x {card.hearts}</Likes>
-                  </LikeWrapper>
                 </CardWrapper>
               </TitleBar>
             </Content>
