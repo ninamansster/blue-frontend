@@ -4,7 +4,7 @@ export const tasks = createSlice({
   name: 'task',
   initialState: {
     items: [
-      { id: 1, text: 'I am a planet steward', complete: true }
+      { id: 1, text: 'I want to be a planet steward', complete: true }
     ]
   },
 
@@ -26,18 +26,17 @@ export const tasks = createSlice({
       // remove it from the items array
       state.items = state.items.filter((item) => item.id !== action.payload)
     },
-    // reducer to check and uncheck (toggle) the tasks via a checkbox. 
+    // reducer to check and uncheck (toggle) the tasks via a checkbox.
 
     toggleComplete: (state, action) => {
-
-      //find task
+      // find task
       const foundItem = state.items.find((item) => item.id === action.payload)
 
-      //toggle the value of toggleComplete.
+      // toggle the value of toggleComplete.
       if (foundItem) {
         foundItem.complete = !foundItem.complete
       }
-    },
+    }
 
   }
 

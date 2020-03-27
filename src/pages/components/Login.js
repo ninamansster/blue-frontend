@@ -45,7 +45,7 @@ export const LoginUser = () => {
         <Link className="back" to="/">
           <BackIcon /> Back
         </Link>
-        <form onSubmit={onLoggedIn}>
+        <form className="loginForm" onSubmit={onLoggedIn}>
           <h2 className="superUser">Login with email and password</h2>
           <input className="log-in" value={email} type="email" placeholder="Email" required onChange={(event) => setEmail(event.target.value)} />
           <input className="log-in" value={password} type="password" placeholder="Password" required onChange={(event) => setPassword(event.target.value)} />

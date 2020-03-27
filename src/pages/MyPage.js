@@ -50,10 +50,12 @@ export const MyPage = () => {
         <h1 className="myPageTitle">Welcome to your page</h1>
         <div className="myPage">
           <section className="mySection">
+            Get inspired by a card
             <SearchCard />
             <RandomPage />
           </section>
           <section className="mySection">
+            Save inspiration in a list
             <AddTaskForm />
             <Tasks />
           </section>
