@@ -1,28 +1,17 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Todo } from './Todo'
-import styled from 'styled-components/macro'
 
 export const Tasks = () => {
   const allTasks = useSelector((store) => store.tasks.items)
 
   return (
-    <ListBackground>
+    <div className="ListBackground">
       {allTasks.map((item) => (
         <Todo key={item.id} item={item} />
       ))}
 
-    </ListBackground>
+    </div>
   )
 }
-
-const ListBackground = styled.div`
- 
-  color: blue;
-  background-color: white;
-  align-items: center;
-  justify-content: center;
-  width: 390px;
-  padding-bottom: 30px;
-`
 

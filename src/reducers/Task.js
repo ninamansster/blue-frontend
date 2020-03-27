@@ -4,11 +4,7 @@ export const tasks = createSlice({
   name: 'task',
   initialState: {
     items: [
-      { id: 1, text: 'Watch video on actions & reducers', complete: true },
-      { id: 2, text: 'Follow redux codealong', complete: true },
-      { id: 3, text: 'Fork weekly assignment', complete: true },
-      { id: 4, text: 'Read the read.me carefully', complete: false },
-      { id: 5, text: 'Create a todo app', complete: false },
+      { id: 1, text: 'I am a planet steward', complete: true }
     ]
   },
 
