@@ -23,7 +23,7 @@ export const FlippingCardPage = () => {
         <BackIcon /> Back
       </Link>
       <section>
-        <h1 className="cardPicker">Pick a card and add like</h1>
+        <h1 className="cardPicker">Flipp a card</h1>
         <main className="fullFlippingPage">
           {cards.map((card) => (
             <article className="flipCard" key={card.cardID}>

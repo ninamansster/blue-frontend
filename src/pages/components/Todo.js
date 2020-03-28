@@ -5,9 +5,7 @@ import styled from 'styled-components/macro'
 
 const List = styled.ul`
   color: darkblue;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   padding-right:0px;
   font-size: 18px;
   font-family: 'Roboto' sans-serif;
@@ -31,16 +29,14 @@ const Checkbox = styled.input`
 const Button = styled.button`
   width: 20px;
   height: 20px;
-  background-color: #e8e9f1;
   text-align: center;
   line-height:13px;
-  border-radius: 5px;
   font-size: 12px;
   font-weight: bold;
   color: white;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-bottom: 25px;
-  padding: 1px 1px 1px 3px;
+  padding: 1px 1px 1px 2px;
 `
 
 export const Todo = (props) => {

@@ -511,7 +511,7 @@ input {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 390px;
+  width: 320px;
   padding-bottom: 30px;
 }
 
@@ -575,6 +575,17 @@ button span {
   .superSteward {
     font-size:20px;
   }
+
+  .page .back {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #b9d5d4;
+    font-weight: bold;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
   
   .superWrapper {
     display:flex;
@@ -600,6 +611,20 @@ button span {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .myPageTitle{
+    font-size:20px;
+  }
+
+  .myPageWrapper {
+    margin-top: 0px;
+  }
+
+  .mySection {
+    width: 340px;
+    margin: 30px 20px;
+    padding: 10px;
   }
 
 }
