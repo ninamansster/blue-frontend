@@ -25,8 +25,8 @@ const LikeWrapper = styled.div`
 // http://localhost:8080/cards/${cardID}
 
 export const DetailsPage = () => {
-  const [card, setCard] = useState([])
-  const [cards, setCards] = useState([])
+  const [card, setCard] = useState({})
+  const [updatedCard, setUpdatedCard] = useState()
   const [loading, setLoading] = useState(false)
   const { cardID } = useParams()
 
@@ -41,20 +41,18 @@ export const DetailsPage = () => {
         setLoading(false)
         console.log(json)
       })
-  }, [cardID])
+  }, [cardID, updatedCard])
 
   if (loading) {
     return <h1>Cards are loading slow today</h1>
   }
 
   const addLike = (likedId) => {
-    const updatedCard = cards.map(() => {
-      if (card.cardID === likedId) {
-        card.hearts += 1
-      }
-      return card
-    })
-    setCards(updatedCard)
+    if (card.cardID === +likedId) {
+      card.hearts += 1
+      setCard(card)
+      setUpdatedCard(card)
+    }
   }
 
   // console.log(card)
