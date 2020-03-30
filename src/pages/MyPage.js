@@ -46,8 +46,8 @@ export const MyPage = () => {
       <Link className="back" to="/">
         <BackIcon /> Back
       </Link>
+      <h1 className="myPageTitle">Welcome to your page</h1>
       <main className="myPageWrapper">
-        <h1 className="myPageTitle">Welcome to your page</h1>
         <div className="myPage">
           <section className="mySection">
             Get inspired by a card

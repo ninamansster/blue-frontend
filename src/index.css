@@ -486,7 +486,7 @@ input {
   flex-direction: column;
   align-items: center;
   width: 400px;
-  margin: 30px 20px;
+  margin: 50px 20px 0px;
   padding: 10px;
 }
 
@@ -576,16 +576,10 @@ button span {
     font-size:20px;
   }
 
-  .page .back {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: #b9d5d4;
-    font-weight: bold;
-    position: absolute;
-    top: 30px;
-    left: 10px;
-  }
+  /* .page .back {
+    top: 10px;
+    left: 50px;
+  } */
   
   .superWrapper {
     display:flex;
@@ -599,13 +593,13 @@ button span {
     margin: 15px;
   }
 
-  .fullFlippingPage {
+  /* .fullFlippingPage {
     margin: 20px 0px;
-  }
+  } */
 
-  .cardPicker {
+  /* .cardPicker {
     margin-top: 100px;
-  }
+  } */
 
   .section {
     display: flex;
@@ -618,7 +612,7 @@ button span {
   }
 
   .myPageWrapper {
-    margin-top: 0px;
+    margin-top: 70px;
   }
 
   .mySection {
